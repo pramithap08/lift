@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(8, 41, 30);
+}
+
+  /* <div class="firstPage"> */
+.firstPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  transition: 0.4s ease;
+}
+/* <h1 class="page-heading">Lift Simulation</h1> */
+.page-heading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #a6a8aa;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; */
+}
+
+
+label{
+    margin-left: 20%;
+}
+
+/* <input type="Number" id="liftNumber" class="lift-sim_input"  placeholder="Enter Atleast 2 lifts" required/> */
+.lift-sim_input {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 5px;
+    min-width: 250px;
+    border: 2px solid #dddddd;
+    transition: 0.4s ease;
+  }
+
+.lift-sim_input:focus {
+    border-color: #3c4349;
+}
+/* <button class="createLiftFloorButton">Simulate</button> */
+.createLiftFloorButton{
+    margin-top: 1rem;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  /* font-family: var(--font-secondary); */
+  border: 4px solid #f38b8b;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+
+/* dynamically create buttons, lift,gates */
+/* <div class="box">
+      <div class="buttonLift">
+          <div class="button">
+              <button class="up" id="up1">Up</button>
+              <button class="down" id="down1">Down</button>
+           </div>
+           <div class="mainLift">
+              <div class="lift" id="lift1" flag="free">
+                <div class="gates" id="gates">
+                   <div class="gate1"></div>
+                   <div class="gate2"></div>
+                </div>
+               <div>
+            </div>
+        </div>
+        <div class="hrfloorName">
+            <hr>
+            <span>Floor 1</span>
+        </div>
+    </div> */
+.buttonLift{
+    display: flex;
+}
+
+.button{
+    width:50px;
+    display: flex;
+    flex-direction: column;
+    margin: 11px 18px;
+ }
+
+ .button button{
+    margin: 2px;
+ }
+.up{
+    font-size: 13px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    background-color: rgb(157, 147, 147);
+    color: #212529;
+}
+.down{
+    font-size: 13px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    background-color: rgb(157, 147, 147);
+    color: #212529;
+}
+.up:hover{
+    background-color: black;
+    color: white;
+}
+.down:hover{
+    background-color: black;
+    color: white;
+}
+
+.mainLift{
+    display: flex;
+    margin-left: 10px;
+}
+.lift{
+    width: 50px;
+    height: 60px;
+    background-color: #d3c2c2;
+    border: 2px solid black;
+    margin-right: 5px;
+    transition-property:transform;
+    transition-timing-function:ease-in;
+}
+
+.gates{
+    display: flex;
+
+}
+.gate1 , .gate2{
+    width: 25px;
+    height: 60px;
+    margin: 1px;
+    background-color:rgb(31, 19, 3);
+    transition: width 3.5s ease-in-out;
+}
+.gate1-move{
+    transform: translateX(-100%);
+}
+
+.gate2-move{
+    transform: translateX(100%);
+}
+
+
+.secondPage{
+    display: none;
+    margin: 4% auto;
+}
+.hrfloorName{
+    display: flex;
+    flex-direction: row;
+    margin: 3px;
+}
+hr{
+    flex-grow:1;
+    height: 1px;
+    border-top: 2px solid black;
+} 
+
+h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+
+ h2 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+
+.goToFirstPage{
+    font-size: 18x;
+    margin: 5px 0 10px 3px ;
+    background-color:#212529;
+    color: white;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
